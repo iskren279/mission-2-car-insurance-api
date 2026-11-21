@@ -5,7 +5,15 @@ const app = express();
 
 app.use(express.json());
 
-// show this
+// API homepage
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "Car Insurance API",
+    status: "Server is running successfully.",
+  });
+});
+
+// Car Value API routes
 app.use(carValueRouter);
 
 export default app;
