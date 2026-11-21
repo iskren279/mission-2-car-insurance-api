@@ -1,3 +1,4 @@
+// Show this
 function calculateCarValue(model, year) {
   if (
     typeof model !== "string" ||
@@ -10,8 +11,10 @@ function calculateCarValue(model, year) {
 
   let alphabetValue = 0;
 
+  // show this
   for (const character of model) {
     if (/[a-zA-Z]/.test(character)) {
+      // show this
       alphabetValue += character.toLowerCase().charCodeAt(0) - 96;
     }
   }

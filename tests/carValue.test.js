@@ -1,14 +1,18 @@
 import request from "supertest";
 import app from "../src/app.js";
 
+
 describe("API 1 - Car Value", () => {
+  // show this, test 1
   test("should calculate the car value for a Civic from 2014", async () => {
+    // show this
     const response = await request(app).post("/api/car-value").send({
       model: "Civic",
       year: 2014,
     });
-
+    // show this
     expect(response.statusCode).toBe(200);
+    // show this
     expect(response.body).toEqual({
       car_value: 6614,
     });
